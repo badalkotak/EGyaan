@@ -1,0 +1,13 @@
+wget https://www.arangodb.com/repositories/arangodb2/xUbuntu_16.04/Release.key
+sudo apt-key add Release.key
+sudo apt-add-repository 'deb https://www.arangodb.com/repositories/arangodb2/xUbuntu_14.04/ /'
+sudo apt-get update
+sudo apt-get install arangodb
+sudo apt-get -f install arangodb
+install libgoogle-perftools4
+install libgoogle-perftools4 libtcmalloc-minimal4
+install arangodb
+sudo apt-add-repository 'deb https://www.arangodb.com/repositories/arangodb2/xUbuntu_16.04/ /'
+install arangodb
+curl
+curl http://localhost:8529/_api/version

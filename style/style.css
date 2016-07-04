@@ -1,0 +1,290 @@
+/*
+Theme Name: Slowave - Multipurpose Responsive HTML5 Template 
+Theme URI: http://themes.iki-bir.com/slowave
+Author: elemis
+Author URI: http://iki-bir.com
+Version: 1.0.5
+
+*/
+/*-----------------------------------------------------------------------------------*/
+/*	RESET
+/*-----------------------------------------------------------------------------------*/
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus {
+    outline: 0 !important
+}
+.fit-vids-style {
+    display: none
+}
+figure {
+    margin: 0;
+    padding: 0;
+}
+figure img {
+    width: 100%;
+    height: auto;
+}
+iframe {
+    border: none
+}
+::selection {
+    background: #fefac7; /* Safari */
+    color: #555555;
+}
+::-moz-selection {
+    background: #fefac7; /* Firefox */
+    color: #555555;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+.btn.responsive-menu {
+    padding: 8px 13px;
+    margin: 0;
+    display: none;
+    font-size: 15px;
+}
+
+.btn,
+.parallax .btn-submit,
+.btn-submit {
+    color: #fff !important;
+    background: #3f8dbf;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding: 11px 20px 10px 20px;
+    font-weight: 800;
+    font-size: 13px;
+    text-shadow: none;
+    border: none;
+    text-transform: uppercase;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+
+
+.login-page {
+  /*background: #f3f3f3;*/
+  background: #f19b24;
+}
+.signup-page {
+  /*background: #f3f3f3;*/
+  background: url("../img/login-bg.png") scroll top center;
+}
+.lock-page {
+  background: #252932;
+}
+.lock-page .container {
+  background: #7A868F;
+}
+.internal-error h1 {
+  -webkit-transform: rotate(10);
+  -moz-transform: rotate(10);
+  -ms-transform: rotate(10);
+  -o-transform: rotate(10);
+  transform: rotate(10);
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+.internal-error h2 {
+  -webkit-transform: rotate(-185);
+  -moz-transform: rotate(-185);
+  -ms-transform: rotate(-185);
+  -o-transform: rotate(-185);
+  transform: rotate(-185);
+  -webkit-transform: rotate(-185deg);
+  -moz-transform: rotate(-185deg);
+  transform: rotate(-185deg);
+  -o-transform: rotate(-185deg);
+}
+.internal-error .backbtn {
+  -webkit-transform: rotate(-44);
+  -moz-transform: rotate(-44);
+  -ms-transform: rotate(-44);
+  -o-transform: rotate(-44);
+  transform: rotate(-44);
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+}
+.internal-error .searchbtn {
+  -webkit-transform: rotate(-44);
+  -moz-transform: rotate(-44);
+  -ms-transform: rotate(-44);
+  -o-transform: rotate(-44);
+  transform: rotate(-44);
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+}
+.full-content-center {
+  width: 100%;
+  padding: 5px 0px;
+  max-width: 500px;
+  margin: 14% auto;
+  text-align: center;
+}
+.full-content {
+  background: #E5E9EC;
+}
+.full-content-center h1 {
+  font-size: 150px;
+  font-family: "Open Sans";
+  line-height: 150px;
+  font-weight: 700;
+  color: #252932;
+}
+.bg-orange-1 {
+  background-color: #e84c3d !important;
+}
+.border-orange-1 {
+  border-color: #e84c3d !important;
+}
+.btn-orange-1 {
+    background-color: #e84c3d;
+    color: #fff;
+    cursor: pointer;
+    width: 41%;
+}
+
+.login-block{ text-align:center;}
+.btn-orange-1:hover {
+  background-color: #d94132 !important;
+  color: #fff;
+}
+.login-wrap {
+  margin: 20px 10%;
+  text-align: left;
+  background: #fff;
+  padding: 20px 20px;
+  color: #555;
+  box-shadow: 0px 0px 5px #df9a3b;
+}
+.login-wrap a {
+  color: #555;
+}
+.login-wrap i {
+  margin-right: 5px;
+}
+.login-wrap .checkbox {
+  margin-left: 0;
+  padding-left: 0;
+}
+.login-wrap .btn-block {
+  margin: 5px 0;
+}
+.login-wrap .login-input {
+  position: relative;
+}
+.login-wrap .login-input .text-input {
+  padding-left: 30px;
+}
+.login-wrap .login-input i.overlay {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #aaa;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	FORMS
+/*-----------------------------------------------------------------------------------*/
+
+input,
+textarea,
+.uneditable-input {
+    width: 100%
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a7a7a;
+    border: 1px solid #dadada;
+    resize: none;
+    vertical-align: middle;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background: #FFF;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border: 1px solid #b3b3b3;
+    background: #FFF;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+textarea {
+    height: 100%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    min-height: 150px;
+    resize: vertical;
+}
+.btn-submit {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    width: auto;
+}
