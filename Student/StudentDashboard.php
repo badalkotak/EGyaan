@@ -198,7 +198,7 @@ a:hover {
           <div class="box"><br>
           <div class="row">
             <div class="col-md-3 col-sm=6 col-xs-6">
-              <center><a href=textbook.php><image src="../Resources/icons/book.png" height=100 width=88><br><h4>Textbook
+              <center><a href=Textbook.php><image src="../Resources/icons/book.png" height=100 width=88><br><h4>Textbook
 	      </a>
             </div>
             <div class="col-md-3 col-sm=6 col-xs-6">
