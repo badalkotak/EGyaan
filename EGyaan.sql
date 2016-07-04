@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 04, 2016 at 02:25 PM
+-- Generation Time: Jul 04, 2016 at 03:11 PM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -53,16 +53,6 @@ CREATE TABLE `Attendance` (
   `Dates` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `Attendance`
---
-
-INSERT INTO `Attendance` (`AttendanceId`, `CourseId`, `StudentId`, `Attendance`, `Dates`) VALUES
-(3, 10, 5, 'P', '2016/06/04'),
-(4, 10, 4, 'P', '2016/06/04'),
-(5, 10, 5, 'P', '2016/07/04'),
-(6, 10, 4, 'P', '2016/07/04');
-
 -- --------------------------------------------------------
 
 --
@@ -80,8 +70,7 @@ CREATE TABLE `Batch` (
 
 INSERT INTO `Batch` (`BatchId`, `BatchName`) VALUES
 (2, 'Information Technology'),
-(3, 'Computer Engineering'),
-(4, 'Deletion testing batch');
+(3, 'Computer Engineering');
 
 -- --------------------------------------------------------
 
@@ -95,16 +84,6 @@ CREATE TABLE `Course` (
   `BatchId` int(11) NOT NULL,
   `Fees` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Course`
---
-
-INSERT INTO `Course` (`CourseId`, `CourseName`, `BatchId`, `Fees`) VALUES
-(9, 'Test Deletion Course 1', 4, 10000),
-(10, 'Test Deletion Course 2', 4, 12000),
-(11, 'Test Deletion Course 3', 4, 10000),
-(12, 'COMPS SUB 1', 3, 12000);
 
 -- --------------------------------------------------------
 
@@ -122,13 +101,6 @@ CREATE TABLE `Doubt` (
   `StudentID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `Doubt`
---
-
-INSERT INTO `Doubt` (`Doubtid`, `Question`, `Answer`, `CourseId`, `StudentFile`, `TeacherFile`, `StudentID`) VALUES
-(2, 'Test question 2?', NULL, 9, '', NULL, 4);
-
 -- --------------------------------------------------------
 
 --
@@ -141,13 +113,6 @@ CREATE TABLE `Notes` (
   `NoteFile` varchar(128) DEFAULT NULL,
   `CourseId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Notes`
---
-
-INSERT INTO `Notes` (`NoteId`, `NoteTitle`, `NoteFile`, `CourseId`) VALUES
-(6, 'Delete Notes 1', '../uploads/notes/E-card.doc', 10);
 
 -- --------------------------------------------------------
 
@@ -187,13 +152,6 @@ CREATE TABLE `Result` (
   `DateOfUpload` varchar(20) DEFAULT NULL,
   `DateOfTest` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Result`
---
-
-INSERT INTO `Result` (`ResultId`, `BatchId`, `CourseId`, `ResultTitle`, `TotalMarks`, `DateOfUpload`, `DateOfTest`) VALUES
-(22, 4, 9, 'Delete Result 1', 30, '04/06/2016', '01/06/2016');
 
 -- --------------------------------------------------------
 
@@ -237,14 +195,6 @@ CREATE TABLE `Student` (
   `ParentMobile` bigint(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `Student`
---
-
-INSERT INTO `Student` (`StudentId`, `StudentFname`, `StudentLname`, `BatchId`, `StudentEmail`, `StudentPasswd`, `StudentMobile`, `StudentGender`, `ParentName`, `ParentEmail`, `ParentPasswd`, `FeesPaid`, `FeesComment`, `DateOFAdmission`, `ParentMobile`) VALUES
-(4, 'Badal', 'Kotak', 4, 'badalkotak@gmail.com', '2GEZ', 9769766106, 'M', 'Manoj', 'mkotak@gmail.com', 'mk123', 22000, '--', '02/06/2016', 9820003397),
-(5, 'Nir', 'Jakharia', 4, 'nj@gmail.com', 'hAm9', 9876543210, 'M', 'Rasik', 'rk@gmail.com', 'nyAj', 25000, '--', '04/06/2016', 9980976543);
-
 -- --------------------------------------------------------
 
 --
@@ -256,17 +206,6 @@ CREATE TABLE `StudentCourseRegistration` (
   `StudentId` int(11) DEFAULT NULL,
   `CourseId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `StudentCourseRegistration`
---
-
-INSERT INTO `StudentCourseRegistration` (`RegistrationId`, `StudentId`, `CourseId`) VALUES
-(5, 5, 9),
-(6, 5, 10),
-(7, 5, 11),
-(8, 4, 9),
-(9, 4, 10);
 
 -- --------------------------------------------------------
 
@@ -280,13 +219,6 @@ CREATE TABLE `StudentMarks` (
   `StudentId` int(11) NOT NULL,
   `Marks` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `StudentMarks`
---
-
-INSERT INTO `StudentMarks` (`MarksId`, `ResultId`, `StudentId`, `Marks`) VALUES
-(6, 22, 4, 29);
 
 -- --------------------------------------------------------
 
@@ -302,13 +234,6 @@ CREATE TABLE `Submission` (
   `DateOfUpload` varchar(20) DEFAULT NULL,
   `CourseId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Submission`
---
-
-INSERT INTO `Submission` (`SubmissionId`, `SubmissionTitle`, `SubmissionFile`, `DateOfSubmission`, `DateOfUpload`, `CourseId`) VALUES
-(4, 'Delete Submission 1', '../uploads/submission/WORKDONE.png', '06/15/2016', '06/13/2016', 10);
 
 -- --------------------------------------------------------
 
@@ -336,13 +261,6 @@ CREATE TABLE `Syllabus` (
   `BatchId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `Syllabus`
---
-
-INSERT INTO `Syllabus` (`SyllabusId`, `CourseId`, `SyllabusFile`, `BatchId`) VALUES
-(3, 9, '../uploads/syllabus/SAIL2D.pdf', 4);
-
 -- --------------------------------------------------------
 
 --
@@ -358,14 +276,6 @@ CREATE TABLE `Teacher` (
   `TeacherPasswd` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `Teacher`
---
-
-INSERT INTO `Teacher` (`TeacherId`, `TeacherFname`, `TeacherLname`, `BatchId`, `TeacherEmail`, `TeacherPasswd`) VALUES
-(3, 'Test', 'Delete2', 4, 'td2@gmail.com', '12345'),
-(4, 'Test', 'Delete1', 4, 'td1@gmail.com', 'b8cI');
-
 -- --------------------------------------------------------
 
 --
@@ -377,14 +287,6 @@ CREATE TABLE `TeacherCourse` (
   `TeacherId` int(11) DEFAULT NULL,
   `CourseId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `TeacherCourse`
---
-
-INSERT INTO `TeacherCourse` (`TeacherCourseId`, `TeacherId`, `CourseId`) VALUES
-(2, 3, 10),
-(3, 4, 9);
 
 -- --------------------------------------------------------
 
@@ -399,13 +301,6 @@ CREATE TABLE `Textbook` (
   `TextbookName` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `Textbook`
---
-
-INSERT INTO `Textbook` (`TextbookId`, `CourseId`, `TextbookFile`, `TextbookName`) VALUES
-(1, 10, '../uploads/textbook/EGyaan_ppt.pdf', 'Delete Book 1');
-
 -- --------------------------------------------------------
 
 --
@@ -418,28 +313,6 @@ CREATE TABLE `Timetable` (
   `CellNo` varchar(8) NOT NULL,
   `CellValue` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Timetable`
---
-
-INSERT INTO `Timetable` (`TimetableId`, `BatchId`, `CellNo`, `CellValue`) VALUES
-(29, 4, 'r0c0', '9-10'),
-(30, 4, 'r0c1', '1'),
-(31, 4, 'r0c2', '2'),
-(32, 4, 'r0c3', '3'),
-(33, 4, 'r0c4', '4'),
-(34, 4, 'r0c5', '5'),
-(35, 4, 'r0c6', '6'),
-(36, 4, 'r0c7', '7'),
-(37, 4, 'r1c0', '10-11'),
-(38, 4, 'r1c1', '8'),
-(39, 4, 'r1c2', '9'),
-(40, 4, 'r1c3', '10'),
-(41, 4, 'r1c4', '11'),
-(42, 4, 'r1c5', '12'),
-(43, 4, 'r1c6', '13'),
-(44, 4, 'r1c7', '14');
 
 --
 -- Indexes for dumped tables
@@ -525,16 +398,16 @@ ALTER TABLE `Student`
 --
 ALTER TABLE `StudentCourseRegistration`
   ADD PRIMARY KEY (`RegistrationId`),
-  ADD KEY `StudentCourseRegistration_ibfk_2` (`CourseId`),
-  ADD KEY `StudentCourseRegistration_ibfk_1` (`StudentId`);
+  ADD KEY `StudentCourseRegistration_ibfk_1` (`StudentId`),
+  ADD KEY `StudentCourseRegistration_ibfk_2` (`CourseId`);
 
 --
 -- Indexes for table `StudentMarks`
 --
 ALTER TABLE `StudentMarks`
   ADD PRIMARY KEY (`MarksId`),
-  ADD KEY `StudentId` (`StudentId`),
-  ADD KEY `ResultId` (`ResultId`);
+  ADD KEY `StudentMarks_ibfk_1` (`StudentId`),
+  ADD KEY `StudentMarks_ibfk_2` (`ResultId`);
 
 --
 -- Indexes for table `Submission`
@@ -602,7 +475,7 @@ ALTER TABLE `AdminLogin`
 -- AUTO_INCREMENT for table `Attendance`
 --
 ALTER TABLE `Attendance`
-  MODIFY `AttendanceId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `AttendanceId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `Batch`
 --
@@ -612,17 +485,17 @@ ALTER TABLE `Batch`
 -- AUTO_INCREMENT for table `Course`
 --
 ALTER TABLE `Course`
-  MODIFY `CourseId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `CourseId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `Doubt`
 --
 ALTER TABLE `Doubt`
-  MODIFY `Doubtid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Doubtid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `Notes`
 --
 ALTER TABLE `Notes`
-  MODIFY `NoteId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `NoteId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `NoticeBoard`
 --
@@ -632,7 +505,7 @@ ALTER TABLE `NoticeBoard`
 -- AUTO_INCREMENT for table `Result`
 --
 ALTER TABLE `Result`
-  MODIFY `ResultId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ResultId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `SlotTimetable`
 --
@@ -647,17 +520,17 @@ ALTER TABLE `Student`
 -- AUTO_INCREMENT for table `StudentCourseRegistration`
 --
 ALTER TABLE `StudentCourseRegistration`
-  MODIFY `RegistrationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `RegistrationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `StudentMarks`
 --
 ALTER TABLE `StudentMarks`
-  MODIFY `MarksId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `MarksId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `Submission`
 --
 ALTER TABLE `Submission`
-  MODIFY `SubmissionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `SubmissionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `SubmissionReport`
 --
@@ -667,22 +540,22 @@ ALTER TABLE `SubmissionReport`
 -- AUTO_INCREMENT for table `Syllabus`
 --
 ALTER TABLE `Syllabus`
-  MODIFY `SyllabusId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `SyllabusId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `Teacher`
 --
 ALTER TABLE `Teacher`
-  MODIFY `TeacherId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `TeacherId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `TeacherCourse`
 --
 ALTER TABLE `TeacherCourse`
-  MODIFY `TeacherCourseId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `TeacherCourseId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `Textbook`
 --
 ALTER TABLE `Textbook`
-  MODIFY `TextbookId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `TextbookId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `Timetable`
 --
@@ -736,14 +609,14 @@ ALTER TABLE `Student`
 --
 ALTER TABLE `StudentCourseRegistration`
   ADD CONSTRAINT `StudentCourseRegistration_ibfk_1` FOREIGN KEY (`StudentId`) REFERENCES `Student` (`StudentId`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `StudentCourseRegistration_ibfk_2` FOREIGN KEY (`CourseId`) REFERENCES `Course` (`CourseId`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `StudentCourseRegistration_ibfk_2` FOREIGN KEY (`CourseId`) REFERENCES `Course` (`CourseId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `StudentMarks`
 --
 ALTER TABLE `StudentMarks`
-  ADD CONSTRAINT `StudentMarks_ibfk_1` FOREIGN KEY (`StudentId`) REFERENCES `Student` (`StudentId`),
-  ADD CONSTRAINT `StudentMarks_ibfk_2` FOREIGN KEY (`ResultId`) REFERENCES `Result` (`ResultId`);
+  ADD CONSTRAINT `StudentMarks_ibfk_1` FOREIGN KEY (`StudentId`) REFERENCES `Student` (`StudentId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `StudentMarks_ibfk_2` FOREIGN KEY (`ResultId`) REFERENCES `Result` (`ResultId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Submission`
@@ -769,7 +642,7 @@ ALTER TABLE `Syllabus`
 -- Constraints for table `Teacher`
 --
 ALTER TABLE `Teacher`
-  ADD CONSTRAINT `Teacher_ibfk_1` FOREIGN KEY (`BatchId`) REFERENCES `Batch` (`BatchId`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `Teacher_ibfk_1` FOREIGN KEY (`BatchId`) REFERENCES `Batch` (`BatchId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `TeacherCourse`
@@ -782,7 +655,7 @@ ALTER TABLE `TeacherCourse`
 -- Constraints for table `Textbook`
 --
 ALTER TABLE `Textbook`
-  ADD CONSTRAINT `Textbook_ibfk_1` FOREIGN KEY (`CourseId`) REFERENCES `Course` (`CourseId`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `Textbook_ibfk_1` FOREIGN KEY (`CourseId`) REFERENCES `Course` (`CourseId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Timetable`
