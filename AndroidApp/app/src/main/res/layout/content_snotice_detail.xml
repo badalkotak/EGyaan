@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.SNoticeDetailActivity"
+    tools:showIn="@layout/activity_snotice_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/content_notice_detail_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondaryDividerColor" />
+
+        <TextView
+            android:id="@+id/content_notice_detail_support_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_notice_detail_divider1"
+            android:background="@color/dividerColor"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="Title"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/content_notice_detail_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/content_notice_detail_support_title"
+            android:background="@color/secondaryDividerColor" />
+
+        <TextView
+            android:id="@+id/content_notice_detail_notice_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_notice_detail_divider2"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="What is Java Class in Java?"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/content_notice_detail_divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/content_notice_detail_notice_title"
+            android:background="@color/secondaryDividerColor" />
+
+        <TextView
+            android:id="@+id/content_notice_detail_support_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_notice_detail_divider3"
+            android:background="@color/dividerColor"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="Description"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/content_notice_detail_divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/content_notice_detail_support_desc"
+            android:background="@color/secondaryDividerColor" />
+
+        <TextView
+            android:id="@+id/content_notice_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/content_notice_detail_divider4"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/answer1"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/content_notice_detail_divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/content_notice_detail_desc"
+            android:background="@color/secondaryDividerColor" />
+
+        <TextView
+            android:id="@+id/content_notice_detail_support_files"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_notice_detail_divider5"
+            android:background="@color/dividerColor"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="Files Attached"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/content_notice_detail_divider6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/content_notice_detail_support_files"
+            android:background="@color/secondaryDividerColor" />
+
+
+        <Button
+            android:id="@+id/content_notice_detail_button_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_notice_detail_divider6"
+            android:text="File" />
+
+    </RelativeLayout>
+
+</ScrollView>

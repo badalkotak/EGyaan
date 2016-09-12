@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2">
+        <TableRow
+            android:weightSum="2"
+            android:background="#e3e3e3">
+            <TextView
+                android:text="Timings"
+                android:padding="10dp"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:text="Subject"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="10dp" />
+        </TableRow>
+    </TableLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/stimetable_fragment_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+</LinearLayout>
