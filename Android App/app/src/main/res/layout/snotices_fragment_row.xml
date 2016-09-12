@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notices_fragment_cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="#fff"
+    card_view:cardCornerRadius="2dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/notices_fragment_row_notice_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:textSize="22sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/notices_fragment_row_notice_title"
+            android:background="@color/dividerColor" />
+
+
+        <TextView
+            android:id="@+id/notices_fragment_row_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/not_answered"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/notices_fragment_row_desc"
+            android:background="@color/dividerColor" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/notices_fragment_row_file_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.3"
+                android:src="@drawable/ic_description_black_24dp" />
+
+            <ImageView
+                android:id="@+id/notices_fragment_row_readmore_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/notices_fragment_row_readmore_text"
+                android:layout_toStartOf="@+id/notices_fragment_row_readmore_text"
+                android:alpha="0.3"
+                android:src="@drawable/ic_receipt_black_24dp" />
+
+            <TextView
+                android:id="@+id/notices_fragment_row_readmore_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Read More" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
